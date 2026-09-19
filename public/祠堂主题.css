@@ -1,0 +1,130 @@
+/* 以用户提供的祠堂画面为主界面底图，并统一为古铜、墨褐、象牙白的视觉体系。 */
+#welcome {
+  justify-content: flex-start;
+  background:
+    linear-gradient(90deg, rgba(20, 13, 10, .06), transparent 25%, transparent 75%, rgba(20, 13, 10, .06)),
+    url("祠堂背景.png") center center / cover no-repeat;
+}
+
+#welcome::before,
+#welcome::after,
+#welcome .temple-scene { display: none; }
+
+#welcome .seal {
+  top: 22px;
+  right: 22px;
+  color: #7d3020;
+  border: 1px solid #7d3020;
+  background: #fff5dfaa;
+  box-shadow: 0 2px 7px #4b2e1f55;
+}
+
+#welcome .eyebrow {
+  margin-top: 17px;
+  margin-bottom: 8px;
+  color: #67442a;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  font-weight: 600;
+  letter-spacing: .34em;
+  text-shadow: 0 1px #fff8e8;
+}
+
+#welcome h1 {
+  color: #332217;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  margin-bottom: 0;
+  text-shadow: 0 1px #fff9e7, 0 2px 4px #6c452422;
+}
+
+#welcome .instruction {
+  width: 88%;
+  margin: 24.5vh 0 12px;
+  padding: 15px 18px;
+  background: linear-gradient(135deg, #fffdf3ae, #ead9b69e);
+  border: 1px solid #765337;
+  box-shadow: 0 5px 14px #24130c26;
+  color: #34251c;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  font-weight: 400;
+  line-height: 1.62;
+  font-size: 13px;
+  text-shadow: 0 1px #fff9edb8;
+}
+
+#welcome .instruction::before,
+#welcome .instruction::after { border-color: #9a7047; }
+#welcome .paper-title { color: #4b2b1b; font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif; font-size: 18px; font-weight: 600; letter-spacing: .14em; }
+#welcome .instruction p { margin-bottom: 8px; }
+
+.primary {
+  position: relative;
+  overflow: hidden;
+  min-width: 238px;
+  padding: 14px 20px;
+  border: 1px solid #382015;
+  border-radius: 1px;
+  background: linear-gradient(135deg, #29170f 0%, #664028 47%, #25150e 100%);
+  color: #f2d39c;
+  box-shadow: inset 0 0 0 2px #b58243, 0 7px 15px #26140d66;
+  letter-spacing: .16em;
+}
+
+.primary::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid #d4ad67aa;
+  pointer-events: none;
+}
+
+.primary:hover { filter: brightness(1.12); }
+
+#welcome .footer-note {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 36px);
+  margin: 0;
+  color: #f5dfb2;
+  background: #27170fe6;
+  border: 1px solid #bb8a4d;
+  box-shadow: 0 3px 10px #1d0e09a0;
+  padding: 7px 12px;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-shadow: none;
+}
+
+/* 求签及结果页沿用同一祠堂照片，并用半透明象牙白层保证文字清晰。 */
+#draw, #result {
+  background:
+    linear-gradient(rgba(255, 252, 244, .80), rgba(250, 242, 227, .78)),
+    url("祠堂背景.png") center center / cover no-repeat;
+}
+
+#draw .eyebrow, #result .eyebrow { color: #654129; text-shadow: 0 1px #fffdf5; }
+#draw h1, #result h1 { color: #352217; text-shadow: 0 1px #fffdf5; }
+#draw .back { color: #4b2b1b; }
+#draw .draw-message, #draw .motion-note { color: #4a2e1d; font-family: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif; font-weight: 500; text-shadow: 0 1px #fffdf5; }
+#result .fortune-number { color: #6b4327; text-shadow: 0 1px #fffdf5; }
+#draw .paper, #result .paper { border-color: #9b7145; background: linear-gradient(135deg, #fffdf3d9, #ead9b6ce); }
+.secondary { border-color: #c69a57; color: #f0d29b; background: #21140eaa; }
+
+/* 用户提供的木质签筒透明素材。 */
+#draw .tube { bottom: -8px; width: 310px; height: 395px; overflow: visible; background: none; border: 0; border-radius: 0; box-shadow: none; }
+#draw .tube-photo { display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 12px 9px #2a190d55); }
+#draw .drawn-stick { display: none; }
+#draw .altar-smoke { bottom: 210px; }
+#draw .shaking .tube { animation: wooden-tube-shake .62s ease-in-out infinite alternate; transform-origin: 50% 88%; }
+@keyframes wooden-tube-shake { from { transform: perspective(700px) rotateX(2.5deg) rotateZ(-1.3deg) translateY(3px); } to { transform: perspective(700px) rotateX(-3deg) rotateZ(1.8deg) translateY(-5px); } }
+
+@media (max-height: 720px) {
+  #welcome .instruction { margin-top: 18vh; font-size: 12px; line-height: 1.52; padding: 12px 15px; }
+  #welcome h1 { font-size: 26px; }
+}

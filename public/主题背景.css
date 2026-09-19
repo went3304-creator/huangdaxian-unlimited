@@ -1,0 +1,32 @@
+#welcome {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 10%, #a96f3d55 0 10%, transparent 34%),
+    radial-gradient(ellipse at 50% 53%, #d3913a20 0 8%, transparent 39%),
+    linear-gradient(180deg, #101c35 0%, #263654 39%, #6a4232 74%, #211815 100%);
+}
+
+#welcome::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -8%; right: -8%; bottom: 21%; height: 25%;
+  opacity: .55;
+  background:
+    linear-gradient(145deg, transparent 0 32%, #16233b 33% 45%, transparent 46% 59%, #132039 60% 72%, transparent 73%),
+    linear-gradient(35deg, transparent 0 26%, #1a2941 27% 47%, transparent 48% 66%, #15223b 67%);
+  filter: blur(1px);
+}
+
+#welcome::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: .32;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 10% 38%, #e5c58919 0 1px, transparent 2px),
+    radial-gradient(ellipse at 84% 28%, #e5c58922 0 1px, transparent 2px),
+    repeating-radial-gradient(ellipse at 50% 40%, transparent 0 39px, #d9b97d10 40px 41px, transparent 42px 68px);
+}

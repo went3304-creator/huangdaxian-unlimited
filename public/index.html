@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>黄大仙线上抽签</title>
+  <link rel="stylesheet" href="抽签样式.css">
+  <link rel="stylesheet" href="主题背景.css">
+  <link rel="stylesheet" href="祠堂主题.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="welcome" class="screen active">
+      <div class="seal">善信<br>诚求</div>
+      <div class="temple-scene" aria-hidden="true">
+        <div class="temple-roof"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="shrine-glow"></div>
+        <div class="incense-burner"><span></span><span></span><span></span></div>
+        <div class="smoke smoke-one"></div><div class="smoke smoke-two"></div><div class="smoke smoke-three"></div>
+      </div>
+      <p class="eyebrow">黄 大 仙 灵 签</p>
+      <h1>静心 · 求签</h1>
+      <article class="paper instruction">
+        <p class="paper-title">求签前请先静心</p>
+        <p>以「心禀」告知黄大仙师：自身（善信某某人）出生日期、住址等个人资料。同时向仙师简述事由，<strong>一签问一事</strong>，日后事情圆满，定当酬答神恩。</p>
+        <p>完成后，请点击下方按钮开始求签。</p>
+      </article>
+      <button class="primary" data-go="draw">去求签 <span>→</span></button>
+      <p class="footer-note">心诚则灵 · 请以敬畏之心求问</p>
+    </section>
+
+    <section id="draw" class="screen">
+      <button class="back" data-go="welcome" aria-label="返回">←</button>
+      <p class="eyebrow">黄 大 仙 灵 签</p>
+      <h1>请持一念，静候灵签</h1>
+      <div id="altar" class="altar">
+        <div class="halo"></div>
+        <div class="altar-smoke"></div>
+        <div class="tube"><img class="tube-photo" src="求签筒透明.png" alt="木质求签筒"></div>
+        <div class="drawn-stick">灵签</div>
+      </div>
+      <p id="draw-message" class="draw-message">心中默念所问之事<br>准备好后，点击开始求签</p>
+      <button id="start-draw" class="primary">开始求签</button>
+      <p class="motion-note">亦可摇动手机求签</p>
+    </section>
+
+    <section id="result" class="screen">
+      <p class="eyebrow">黄 大 仙 灵 签</p>
+      <p id="fortune-number" class="fortune-number"></p>
+      <h1 id="fortune-grade"></h1>
+      <img id="grade-image" class="grade-image" alt="灵签等级图">
+      <article class="paper fortune-paper">
+        <p class="label">签名</p><h2 id="fortune-title"></h2>
+        <div class="divider">✦</div>
+        <p class="label">签诗</p><p id="fortune-poem" class="poem"></p>
+      </article>
+      <a class="primary official-link" href="https://taonet.siksikyuen.org.hk/StickEnquiry" target="_blank" rel="noopener">前往黄大仙官方平台解签 <span>→</span></a>
+      <button class="secondary" data-go="draw">再求一签</button>
+    </section>
+  </main>
+  <script src="签文数据.js"></script>
+  <script src="抽签程序.js"></script>
+</body>
+</html>
