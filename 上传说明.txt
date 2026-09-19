@@ -1,0 +1,10 @@
+请把本文件夹里面的所有内容上传到 GitHub 仓库的最外层。
+
+上传后，GitHub 文件列表必须能看到：
+1. public 文件夹
+2. wrangler.jsonc 文件
+3. 上传说明.txt 文件
+
+不要只上传 public 文件夹里的内容；必须保留 public 这个文件夹本身。
+
+Cloudflare Worker 名称已设置为：huangdaxian-unlimited2

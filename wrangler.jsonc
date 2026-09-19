@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "huangdaxian-unlimited",
+  "name": "huangdaxian-unlimited2",
   "compatibility_date": "2026-09-19",
   "assets": {
     "directory": "./public"
